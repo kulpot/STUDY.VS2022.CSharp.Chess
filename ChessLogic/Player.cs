@@ -8,5 +8,8 @@ namespace ChessLogic
 {
     public enum Player
     {
+        None,
+        White,
+        Black
     }
 }
