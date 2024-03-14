@@ -12,4 +12,18 @@ namespace ChessLogic
         White,
         Black
     }
+
+    public static class PlayerExtensions
+    {
+        public static Player Oppenent(this Player player)
+        {
+            switch (player)
+            {
+                case Player.White:
+                    return Player.Black;
+                case Player.Black: 
+                    return Player.White;
+            }
+        }
+    }
 }
