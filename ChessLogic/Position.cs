@@ -17,5 +17,15 @@ namespace ChessLogic
             Row = row;
             Column = column;
         }
+
+        public Player SquareColor()
+        {
+            if((Row + Column) % 2 == 0)
+            {
+                return Player.White;
+            }
+
+            return Player.Black;
+        }
     }
 }
