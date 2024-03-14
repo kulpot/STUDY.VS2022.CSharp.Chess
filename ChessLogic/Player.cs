@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChessLogic
 {
-    public class Player
+    public enum Player
     {
     }
 }
