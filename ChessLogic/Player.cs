@@ -17,13 +17,12 @@ namespace ChessLogic
     {
         public static Player Oppenent(this Player player)
         {
-            switch (player)
+            return player switch
             {
-                case Player.White:
-                    return Player.Black;
-                case Player.Black: 
-                    return Player.White;
-            }
+                Player.White => Player.Black,
+                Player.Black => Player.White,
+                _ => Player.None,
+            };
         }
     }
 }
