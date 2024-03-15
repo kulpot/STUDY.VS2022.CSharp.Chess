@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChessLogic.Pieces
+namespace ChessLogic
 {
-    internal class Piece
+    public abstract class Piece
     {
+
     }
 }
