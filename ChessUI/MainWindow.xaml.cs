@@ -19,10 +19,15 @@ namespace ChessUI
     {
         private readonly Image[,] piecImages = new Image[8, 8];
 
+        private GameState gameState;
+
         public MainWindow()
         {
             InitializeComponent();
             InitializeBoard();
+
+            gameState = new GameState(Player.White, Board.Initial());
+            DrawBoard(gameState.Board);
         }
 
         private void InitializeBoard()
@@ -34,6 +39,18 @@ namespace ChessUI
                     Image image = new Image();
                     piecImages[r, c] = image;
                     PieceGrid.Children.Add(image);
+                }
+            }
+        }
+
+        private void DrawBoard(Board board)
+        {
+            for (int r = 0; r < 8; r++)
+            {
+                for (int c = 0; c < 8; c++)
+                {
+                    Piece piece = board[r, c];
+                    piecImages[r, c].Source = Images.GetImage(piece);
                 }
             }
         }
