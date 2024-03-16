@@ -11,6 +11,16 @@ namespace ChessUI
 {
     public static class Images
     {
+        private static readonly Dictionary<PieceType, ImageSource> whiteSources = new()
+        {
+            { PieceType.Pawn, LoadImage("Assets/PawnW.png") },
+            { PieceType.Bishop, LoadImage("Assets/BishopW.png") },
+            { PieceType.Knight, LoadImage("Assets/KnightW.png") },
+            { PieceType.Rook, LoadImage("Assets/RookW.png") },
+            { PieceType.Queen, LoadImage("Assets/QueenW.png") },
+            { PieceType.King, LoadImage("Assets/KingW.png") },
+        };
+
         private static ImageSource LoadImage(string filePath)
         {
             return new BitmapImage(new Uri(filePath, UriKind.Relative));
