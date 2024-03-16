@@ -45,5 +45,15 @@ namespace ChessUI
                 _ => null
             };
         }
+
+        public static ImageSource GetImage(Piece piece)
+        {
+            if(piece == null)
+            {
+                return null;
+            }
+
+            return GetImage(piece.Color, piece.Type);
+        }
     }
 }
