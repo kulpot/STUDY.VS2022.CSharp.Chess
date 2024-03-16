@@ -38,7 +38,7 @@ namespace ChessUI
             return color switch
             {
                 Player.White => whiteSources[type],
-                Player.Black => whiteSources[type],
+                Player.Black => blackSources[type],
                 _ => null
             };
         }
