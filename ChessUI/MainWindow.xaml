@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="Chess" Width="600" SizeToContent="Height"
         Icon="Assets/icon.ico"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        Background="#101010">
     <Viewbox>
         <Grid x:Name="BoardGrid"
               Width="600"
@@ -15,6 +16,12 @@
             <Grid.Background>
                 <ImageBrush ImageSource="Assets/Board.png"/>
             </Grid.Background>
+
+            <UniformGrid x:Name="PieceGrid"
+                         Rows="8"
+                         Columns="8">
+                
+            </UniformGrid>
         </Grid>
     </Viewbox>
 </Window>
