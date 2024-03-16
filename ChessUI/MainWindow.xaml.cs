@@ -22,6 +22,7 @@ namespace ChessUI
         public MainWindow()
         {
             InitializeComponent();
+            InitializeBoard();
         }
 
         private void InitializeBoard()
