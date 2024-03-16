@@ -35,5 +35,15 @@ namespace ChessUI
         {
             return new BitmapImage(new Uri(filePath, UriKind.Relative));
         }
+
+        public static ImageSource GetImage(Player color, PieceType type)
+        {
+            return color switch
+            {
+                Player.White => whiteSources[type],
+                Player.Black => whiteSources[type],
+                _ => null
+            };
+        }
     }
 }
