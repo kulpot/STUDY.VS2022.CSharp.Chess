@@ -38,5 +38,10 @@ namespace ChessLogic
                 yield break;
             }
         }
+
+        protected IEnumerable<Position> MovePositionsInDirs(Position from, Board board, Direction[] dirs)
+        {
+            return dirs.SelectMany(dir => MovePositionsInDir(from, board, dir));
+        }
     }
 }
