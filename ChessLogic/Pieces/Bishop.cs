@@ -12,6 +12,14 @@ namespace ChessLogic
 
         public override Player Color { get; }
 
+        private static readonly Direction[] dirs = new Direction[]
+        {
+            Direction.NorthWest,
+            Direction.NorthEast,
+            Direction.SouthWest,
+            Direction.SouthEast
+        };
+
         public Bishop(Player color)
         {
             Color = color;
