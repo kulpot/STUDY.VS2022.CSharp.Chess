@@ -35,5 +35,23 @@ namespace ChessLogic
             copy.HasMoved = HasMoved;
             return copy;
         }
+
+        private IEnumerable<Position> MovePositions(Position from, Board board)
+        {
+            foreach(Direction dir in dirs)
+            {
+                Position to = from + dir;
+
+                if(!Board.IsInside(to))
+                {
+                    continue;
+                }
+
+                if(board.IsEmpty(to) || board[to].Color != Color)
+                {
+                    yield return to;
+                }
+            }
+        }
     }
 }
