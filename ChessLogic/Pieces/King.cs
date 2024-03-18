@@ -53,5 +53,13 @@ namespace ChessLogic
                 }
             }
         }
+
+        public override IEnumerable<Move> GetMoves(Position from, Board board)
+        {
+            foreach(Position to in MovePositions(from, board))
+            {
+                yield return new NormalMove(from, to);
+            }
+        }
     }
 }
