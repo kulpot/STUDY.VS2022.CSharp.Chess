@@ -38,5 +38,15 @@ namespace ChessLogic
         {
             return Board.IsInside(pos) && board.IsEmpty(pos);
         }
+
+        private bool CanCaptureAt(Position pos, Board board)
+        {
+            if(!Board.IsInside(pos) || board.IsEmpty(pos))
+            {
+                return false;
+            }
+
+            return board[pos].Color != Color;
+        }
     }
 }
