@@ -33,5 +33,10 @@ namespace ChessLogic
             copy.HasMoved = HasMoved;
             return copy;
         }
+
+        private static bool CanMoveTo(Position pos, Board board)
+        {
+            return Board.IsInside(pos) && board.IsEmpty(pos);
+        }
     }
 }
