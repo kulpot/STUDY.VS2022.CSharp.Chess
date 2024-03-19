@@ -42,6 +42,10 @@ namespace ChessUI
                     Image image = new Image();
                     pieceImages[r, c] = image;
                     PieceGrid.Children.Add(image);
+
+                    Rectangle highlight = new Rectangle();
+                    highlights[r, c] = highlight;
+                    HighlightGrid.Children.Add(highlight);
                 }
             }
         }
