@@ -61,5 +61,30 @@ namespace ChessUI
                 }
             }
         }
+
+        private void BoardGrid_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void CacheMoves(IEnumerable<Move> moves)
+        {
+            moveCache.Clear();
+
+            foreach(Move move in moves)
+            {
+                moveCache[move.ToPos] = move;
+            }
+        }
+
+        private void ShowHighlights()
+        {
+            Color color = Color.FromArgb(150, 125, 255, 125);
+
+            foreach(Position to in moveCache.Keys)
+            {
+                highlights[to.Row, to.Column].Fill = new SolidColorBrush(color);
+            }
+        }
     }
 }
