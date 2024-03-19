@@ -86,5 +86,13 @@ namespace ChessUI
                 highlights[to.Row, to.Column].Fill = new SolidColorBrush(color);
             }
         }
+
+        private void HideHighlights()
+        {
+            foreach(Position to in moveCache.Keys)
+            {
+                highlights[to.Row, to.Column].Fill = Brushes.Transparent;
+            }
+        }
     }
 }
