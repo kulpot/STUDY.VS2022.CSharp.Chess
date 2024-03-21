@@ -43,5 +43,10 @@ namespace ChessLogic
         {
             return dirs.SelectMany(dir => MovePositionsInDir(from, board, dir));
         }
+
+        public virtual bool CanCaptureOpponentKing(Position from, Board board)
+        {
+
+        }
     }
 }
