@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ChessLogic
+﻿namespace ChessLogic
 {
     public abstract class Piece
     {
@@ -46,7 +40,11 @@ namespace ChessLogic
 
         public virtual bool CanCaptureOpponentKing(Position from, Board board)
         {
-
+            return GetMoves(from, board).Any(move =>
+            {
+                Piece piece = board[move.ToPos];
+                return piece != null && piece.Type == PieceType.King;
+            });
         }
     }
 }
