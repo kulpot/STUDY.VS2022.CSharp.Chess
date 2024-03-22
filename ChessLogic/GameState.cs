@@ -35,6 +35,7 @@ namespace ChessLogic
         {
             move.Execute(Board);
             CurrentPlayer = CurrentPlayer.Oppenent();
+            CheckForGameOver();
         }
 
         public IEnumerable<Move> AllLegalMovesFor(Player player)
