@@ -47,5 +47,10 @@ namespace ChessLogic
 
             return moveCandidates.Where(move => move.IsLegal(Board));
         }
+
+        private void CheckForGameOver()
+        {
+
+        }
     }
 }
