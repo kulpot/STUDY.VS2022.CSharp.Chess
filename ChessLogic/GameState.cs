@@ -11,6 +11,7 @@ namespace ChessLogic
         public Board Board { get; }
 
         public Player CurrentPlayer { get; private set; }
+        public Result Result { get; private set; } = null;
 
         public GameState(Player player, Board board)
         {
