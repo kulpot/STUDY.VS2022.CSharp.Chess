@@ -50,7 +50,17 @@ namespace ChessLogic
 
         private void CheckForGameOver()
         {
-
+            if(!AllLegalMovesFor(CurrentPlayer).Any())
+            {
+                if(Board.IsInCheck(CurrentPlayer))
+                {
+                    Result = Result.Win(CurrentPlayer.Oppenent());
+                }
+                else
+                {
+                    Result = Result.Draw(EndReason.Stalemate);
+                }
+            }
         }
     }
 }
