@@ -36,5 +36,16 @@ namespace ChessLogic
             move.Execute(Board);
             CurrentPlayer = CurrentPlayer.Oppenent();
         }
+
+        public IEnumerable<Move> AllLegalMovesFor(Player player)
+        {
+            IEnumerable<Move> moveCandidates = Board.PiecePositionsFor(player).SelectMany(pos =>
+            {
+                Piece piece = Board[pos];
+                return piece.GetMoves(pos, Board);
+            });
+
+            return moveCandidates.Where(move => move.IsLegal(Board));
+        }
     }
 }
