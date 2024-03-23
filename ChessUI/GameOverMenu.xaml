@@ -21,6 +21,19 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
+            <TextBlock Grid.Column="2"
+                       x:Name="WinnerText"
+                       Text="WINNER TEXT"
+                       Style="{StaticResource TextStyle}"
+                       FontSize="28"/>
+
+            <TextBlock Grid.Row="1"
+                       Grid.ColumnSpan="2"
+                       x:Name="ReasonText"
+                       Text="REASON TEXT"
+                       Style="{StaticResource TextStyle}"
+                       FontSize="16"/>
+            
             
         </Grid>
     </Border>
