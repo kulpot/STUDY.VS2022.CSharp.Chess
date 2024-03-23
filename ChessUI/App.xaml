@@ -4,6 +4,9 @@
              xmlns:local="clr-namespace:ChessUI"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <SolidColorBrush x:Key="StrokeColor">#260000</SolidColorBrush>
+        <SolidColorBrush x:Key="FillColor">#cc380404</SolidColorBrush>
+        <SolidColorBrush x:Key="TextColor">#ffa274</SolidColorBrush>
+        <SolidColorBrush x:Key="ButtonColor">#730909</SolidColorBrush>
     </Application.Resources>
 </Application>
