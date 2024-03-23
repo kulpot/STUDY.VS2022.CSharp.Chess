@@ -21,7 +21,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <TextBlock Grid.Column="2"
+            <TextBlock Grid.ColumnSpan="2"
                        x:Name="WinnerText"
                        Text="WINNER TEXT"
                        Style="{StaticResource TextStyle}"
@@ -33,8 +33,21 @@
                        Text="REASON TEXT"
                        Style="{StaticResource TextStyle}"
                        FontSize="16"/>
-            
-            
+
+            <Button Grid.Row="2"
+                    Content="RESTART"
+                    Style="{StaticResource ButtonStyle}"
+                    Width="80"
+                    Height="30"
+                    Click="Restart_Click"/>
+
+            <Button Grid.Row="2"
+                    Grid.Column="1"
+                    Content="EXIT"
+                    Style="{StaticResource ButtonStyle}"
+                    Width="80"
+                    Height="30"
+                    Click="Exit_Click"/>
         </Grid>
     </Border>
 </UserControl>
