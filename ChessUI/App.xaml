@@ -8,5 +8,11 @@
         <SolidColorBrush x:Key="FillColor">#cc380404</SolidColorBrush>
         <SolidColorBrush x:Key="TextColor">#ffa274</SolidColorBrush>
         <SolidColorBrush x:Key="ButtonColor">#730909</SolidColorBrush>
+
+        <Style TargetType="Border" x:Key="BorderStyle">
+            <Setter Property="BorderThickness" Value="4" />
+            <Setter Property="BorderBrush" Value="{StaticResource StrokeColor}" />
+            <Setter Property="Background" Value="{StaticResource FillColor}" />
+        </Style>
     </Application.Resources>
 </Application>
