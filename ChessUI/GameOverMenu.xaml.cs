@@ -30,6 +30,16 @@ namespace ChessUI
             //Player player = (Player)8;
         }
 
+        private static string PlayerString(Player player)
+        {
+            return player switch
+            {
+                Player.White => "WHITE",
+                Player.Black => "BLACK",
+                _ => ""
+            };
+        }
+
         private void Restart_Click(object sender, RoutedEventArgs e)
         {
             OptionSelected?.Invoke(Option.Restart);
