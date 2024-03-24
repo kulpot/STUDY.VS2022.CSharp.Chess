@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using ChessLogic;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace ChessUI
@@ -14,6 +15,19 @@ namespace ChessUI
         public GameOverMenu()
         {
             InitializeComponent();
+        }
+
+        private static string GetWinnerText(Player winner)
+        {
+            return winner switch
+            {
+                Player.White => "WHITE WINS",
+                Player.Black => "BLACK WINS",
+                //Player.None => "IT'S A DRAW"
+                _ => "IT'S A DRAW"
+            };
+
+            //Player player = (Player)8;
         }
 
         private void Restart_Click(object sender, RoutedEventArgs e)
