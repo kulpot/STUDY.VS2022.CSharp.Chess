@@ -12,9 +12,13 @@ namespace ChessUI
 
         public event Action<Option> OptionSelected;
 
-        public GameOverMenu()
+        public GameOverMenu(GameState gameState)
         {
             InitializeComponent();
+
+            Result result = gameState.Result;
+            WinnerText.Text = GetWinnerText(result.Winner);
+            ReasonText.Text = GetReasonText(result.Reason, gameState.CurrentPlayer);
         }
 
         private static string GetWinnerText(Player winner)
