@@ -18,12 +18,12 @@ namespace ChessUI
 
         private void Restart_Click(object sender, RoutedEventArgs e)
         {
-
+            OptionSelected?.Invoke(Option.Restart);
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-
+            OptionSelected?.Invoke(Option.Exit);
         }
     }
 }
