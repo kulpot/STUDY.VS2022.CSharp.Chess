@@ -155,5 +155,10 @@ namespace ChessUI
                 Cursor = ChessCursors.BlackCursor;
             }
         }
+
+        private bool IsMenuOnScreen()
+        {
+            return MenuContainer.Content != null;
+        }
     }
 }
