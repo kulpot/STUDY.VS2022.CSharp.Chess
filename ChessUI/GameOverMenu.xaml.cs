@@ -8,6 +8,9 @@ namespace ChessUI
     /// </summary>
     public partial class GameOverMenu : UserControl
     {
+
+        public event Action<Option> OptionSelected;
+
         public GameOverMenu()
         {
             InitializeComponent();
