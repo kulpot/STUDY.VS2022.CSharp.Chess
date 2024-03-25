@@ -63,7 +63,19 @@ namespace ChessLogic
 
             if(CanMoveTo(oneMovePos, board))
             {
-                yield return new NormalMove(from, oneMovePos);
+                if(oneMovePos.Row == 0 || oneMovePos.Row == 7)
+                {
+                    foreach(Move promMove in PromotionMoves(from, oneMovePos))
+                    {
+                        yield return promMove;
+                    }
+                }
+                else
+                {
+                    yield return new NormalMove(from, oneMovePos);
+                }
+
+                //yield return new NormalMove(from, oneMovePos);
 
                 Position twoMovesPos = oneMovePos + forward;
 
