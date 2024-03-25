@@ -94,7 +94,18 @@ namespace ChessLogic
 
                 if(CanCaptureAt(to, board))
                 {
-                    yield return new NormalMove(from, to);
+                    //yield return new NormalMove(from, to);
+                    if (to.Row == 0 || to.Row == 7)
+                    {
+                        foreach (Move promMove in PromotionMoves(from, to))
+                        {
+                            yield return promMove;
+                        }
+                    }
+                    else
+                    {
+                        yield return new NormalMove(from, to);
+                    }
                 }
             }
         }
