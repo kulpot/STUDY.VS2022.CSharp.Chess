@@ -24,5 +24,25 @@ namespace ChessUI
         {
             InitializeComponent();
         }
+
+        private void QueenImg_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void BishopImg_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void RookImg_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void KnightImg_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }
