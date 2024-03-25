@@ -110,7 +110,16 @@ namespace ChessUI
 
             if(moveCache.TryGetValue(pos, out Move move))
             {
-                HandleMove(move);
+                if(move.Type == MoveType.PawnPromotion)
+                {
+                    HandlePromotion(move.FromPos, move.ToPos);
+                }
+                else
+                {
+                    HandleMove(move);
+                }
+
+                //HandleMove(move);
             }
         }
 
