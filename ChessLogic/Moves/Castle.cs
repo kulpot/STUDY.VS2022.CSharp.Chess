@@ -36,5 +36,10 @@ namespace ChessLogic
                 rookToPos = new Position(kingPos.Row, 3);
             }
         }
+
+        public override void Execute(Board board)
+        {
+            
+        }
     }
 }
