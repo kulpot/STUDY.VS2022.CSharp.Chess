@@ -29,6 +29,11 @@ namespace ChessLogic
             Color = color;
         }
 
+        private static bool IsUnmovedRook(Position pos, Board board)
+        {
+            return
+        }
+
         public override Piece Copy()
         {
             King copy = new King(Color);
