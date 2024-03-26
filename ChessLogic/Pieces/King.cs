@@ -31,7 +31,13 @@ namespace ChessLogic
 
         private static bool IsUnmovedRook(Position pos, Board board)
         {
-            return
+            if(board.IsEmpty(pos))
+            {
+                return false;
+            }
+
+            Piece piece = board[pos];
+            return piece.Type == PieceType.Rook && !piece.HasMoved;
         }
 
         public override Piece Copy()
