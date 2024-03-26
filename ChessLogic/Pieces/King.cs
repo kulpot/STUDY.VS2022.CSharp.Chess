@@ -40,6 +40,11 @@ namespace ChessLogic
             return piece.Type == PieceType.Rook && !piece.HasMoved;
         }
 
+        private static bool AllEmpty(IEnumerable<Position> positions, Board board)
+        {
+            return positions.All(pos => board.IsEmpty(pos));
+        }
+
         public override Piece Copy()
         {
             King copy = new King(Color);
