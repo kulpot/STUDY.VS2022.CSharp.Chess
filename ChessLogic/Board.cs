@@ -33,6 +33,11 @@ namespace ChessLogic
             return pawnSkipPositions[player];
         }
 
+        public void SetPawnSkipPosition(Player player, Position pos)
+        {
+
+        }
+
         public static Board Initial()
         {
             Board board = new Board();
