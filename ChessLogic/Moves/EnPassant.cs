@@ -20,5 +20,11 @@ namespace ChessLogic
             ToPos = to;
             capturePos = new Position(from.Row, to.Column);
         }
+
+        public override void Execute(Board board)
+        {
+            new NormalMove(FromPos, ToPos).Execute(board);
+            board[capturePos] = null;
+        }
     }
 }
