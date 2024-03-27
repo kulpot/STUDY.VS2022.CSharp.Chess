@@ -4,9 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChessLogic.Moves
+namespace ChessLogic
 {
-    internal class DoublePawn
+    public class DoublePawn : Move
     {
+        public override MoveType Type => MoveType.DoublePawn;
+        public override Position FromPos { get; }
+        public override Position ToPos { get; }
+
+        private readonly Position skippedPos;
+
+        public DoublePawn(Position from, Position to)
+        {
+            FromPos = from;
+            ToPos = to;
+            skippedPos = new Position((from.Row + to.Row) / 2, from.Column);
+        }
     }
 }
