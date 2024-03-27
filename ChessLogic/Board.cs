@@ -35,7 +35,7 @@ namespace ChessLogic
 
         public void SetPawnSkipPosition(Player player, Position pos)
         {
-
+            pawnSkipPositions[player] = pos;
         }
 
         public static Board Initial()
