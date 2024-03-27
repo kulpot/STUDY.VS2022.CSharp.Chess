@@ -28,6 +28,11 @@ namespace ChessLogic
             set { this[pos.Row, pos.Column] = value; }
         }
 
+        public Position GetPawnSkipPosition(Player player)
+        {
+            return pawnSkipPositions[player];
+        }
+
         public static Board Initial()
         {
             Board board = new Board();
