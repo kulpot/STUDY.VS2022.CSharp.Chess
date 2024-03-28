@@ -24,5 +24,15 @@ namespace ChessUI
         {
             InitializeComponent();
         }
+
+        private void Continue_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Restart_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
