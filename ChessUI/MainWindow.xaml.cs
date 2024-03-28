@@ -226,7 +226,12 @@ namespace ChessUI
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
-
+            if(!IsMenuOnScreen() && e.Key == Key.Escape)
+            {
+                ShowPauseMenu();
+            }
         }
+
+
     }
 }
