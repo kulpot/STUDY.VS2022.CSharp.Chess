@@ -19,7 +19,12 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.ColumnSpan="2"
+                       Text="RESTART GAME?"
+                       Style="{StaticResource TextStyle}"
+                       FontSize="28"/>
         </Grid>
-        
+
     </Border>
 </UserControl>
