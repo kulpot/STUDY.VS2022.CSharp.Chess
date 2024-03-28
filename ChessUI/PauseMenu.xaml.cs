@@ -20,6 +20,8 @@ namespace ChessUI
     /// </summary>
     public partial class PauseMenu : UserControl
     {
+        public event Action<Option> OptionSelected;
+
         public PauseMenu()
         {
             InitializeComponent();
@@ -27,12 +29,12 @@ namespace ChessUI
 
         private void Continue_Click(object sender, RoutedEventArgs e)
         {
-
+            OptionSelected?.Invoke(Option.Continue);
         }
 
         private void Restart_Click(object sender, RoutedEventArgs e)
         {
-
+            OptionSelected?.Invoke(Option.Restart);
         }
     }
 }
