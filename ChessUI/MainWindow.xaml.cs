@@ -223,5 +223,10 @@ namespace ChessUI
             DrawBoard(gameState.Board);
             SetCursor(gameState.CurrentPlayer);
         }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }
