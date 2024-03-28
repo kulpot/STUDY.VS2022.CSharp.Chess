@@ -232,6 +232,20 @@ namespace ChessUI
             }
         }
 
+        private void ShowPauseMenu()
+        {
+            PauseMenu pauseMenu = new PauseMenu();
+            MenuContainer.Content = pauseMenu;
 
+            pauseMenu.OptionSelected += option =>
+            {
+                MenuContainer.Content = null;
+
+                if (option == Option.Restart)
+                {
+                    RestartGame();
+                }
+            };
+        }
     }
 }
