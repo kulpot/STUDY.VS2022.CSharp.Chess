@@ -24,6 +24,22 @@
                        Text="RESTART GAME?"
                        Style="{StaticResource TextStyle}"
                        FontSize="28"/>
+            
+            <Button Grid.Row="2"
+                    Content="CONTINUE"
+                    Style="{StaticResource ButtonStyle}"
+                    Width="80"
+                    Height="30"
+                    Click="Continue_Click"/>
+
+            <Button Grid.Row="2"
+                    Grid.Column="1"
+                    Content="RESTART"
+                    Style="{StaticResource ButtonStyle}"
+                    Width="80"
+                    Height="30"
+                    Click="Restart_Click"/>
+
         </Grid>
 
     </Border>
