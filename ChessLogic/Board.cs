@@ -148,5 +148,10 @@ namespace ChessLogic
         {
             return counting.TotalCount == 2;
         }
+
+        private static bool IsKingBishopVKing(Counting counting)
+        {
+            return counting.TotalCount == 3 && (counting.White(PieceType.Bishop) == 1 || counting.Black(PieceType.Bishop) == 1);
+        }
     }
 }
