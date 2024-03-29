@@ -153,5 +153,10 @@ namespace ChessLogic
         {
             return counting.TotalCount == 3 && (counting.White(PieceType.Bishop) == 1 || counting.Black(PieceType.Bishop) == 1);
         }
+
+        private static bool IsKingKnightVKing(Counting counting)
+        {
+            return counting.TotalCount == 3 && (counting.White(PieceType.Knight) == 1 || counting.Black(PieceType.Knight) == 1);
+        }
     }
 }
