@@ -35,5 +35,15 @@ namespace ChessLogic
 
             TotalCount++;
         }
+
+        public int White(PieceType type)
+        {
+            return whiteCount[type];
+        }
+
+        public int Black(PieceType type)
+        {
+            return blackCount[type];
+        }
     }
 }
