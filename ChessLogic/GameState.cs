@@ -61,6 +61,7 @@
             {
                 Result = Result.Draw(EndReason.InsufficientMaterial);
             }
+
         }
 
         public bool IsGameOver()
