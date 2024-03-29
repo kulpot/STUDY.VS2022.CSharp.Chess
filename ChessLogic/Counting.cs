@@ -21,5 +21,19 @@ namespace ChessLogic
                 blackCount[type] = 0;
             }
         }
+
+        public void Increment(Player color, PieceType type)
+        {
+            if(color == Player.White)
+            {
+                whiteCount[type]++;
+            }
+            else if(color == Player.Black)
+            {
+                blackCount[type]++;
+            }
+
+            TotalCount++;
+        }
     }
 }
