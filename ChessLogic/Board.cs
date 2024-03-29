@@ -136,5 +136,17 @@ namespace ChessLogic
 
             return counting;
         }
+
+        public bool InsufficientMaterial()
+        {
+            Counting counting = CountPieces();
+
+            return false;
+        }
+
+        private static bool IsKingVKing(Counting counting)
+        {
+            return counting.TotalCount == 2;
+        }
     }
 }
