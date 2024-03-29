@@ -173,5 +173,10 @@ namespace ChessLogic
 
 
         }
+
+        private Position FindPiece(Player color, PieceType type)
+        {
+            return PiecePositionsFor(color).First(pos => this[pos].Type == type);
+        }
     }
 }
