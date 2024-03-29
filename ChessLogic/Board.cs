@@ -159,7 +159,7 @@ namespace ChessLogic
             return counting.TotalCount == 3 && (counting.White(PieceType.Knight) == 1 || counting.Black(PieceType.Knight) == 1);
         }
 
-        private static bool IsKingBishopVKingBishop(Counting counting)
+        private bool IsKingBishopVKingBishop(Counting counting)
         {
             if(counting.TotalCount != 4)
             {
@@ -171,7 +171,10 @@ namespace ChessLogic
                 return false;
             }
 
+            Position wBishopPos = FindPiece(Player.White, PieceType.Bishop);
+            Position bBishopPos = FindPiece(Player.Black, PieceType.Bishop);
 
+            return wBishopPos.SquareColor() == bBishopPos.SquareColor();
         }
 
         private Position FindPiece(Player color, PieceType type)
