@@ -141,7 +141,9 @@ namespace ChessLogic
         {
             Counting counting = CountPieces();
 
-            return false;
+            //return false;
+            return IsKingVKing(counting) || IsKingBishopVKing(counting) ||
+                IsKingKnightVKing(counting) || IsKingBishopVKingBishop(counting);
         }
 
         private static bool IsKingVKing(Counting counting)
