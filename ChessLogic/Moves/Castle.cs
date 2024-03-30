@@ -42,6 +42,8 @@ namespace ChessLogic
         {
             new NormalMove(FromPos, ToPos).Execute(board);
             new NormalMove(rookFromPos, rookToPos).Execute(board);
+
+            return false;
         }
 
         public override bool IsLegal(Board board)
