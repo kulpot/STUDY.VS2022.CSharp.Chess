@@ -6,7 +6,8 @@
         public abstract Position FromPos { get; }
         public abstract Position ToPos { get; }
 
-        public abstract void Execute(Board board);
+        //public abstract void Execute(Board board);
+        public abstract bool Execute(Board board);
 
         public virtual bool IsLegal(Board board)
         {
