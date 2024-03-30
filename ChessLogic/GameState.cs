@@ -30,7 +30,18 @@
         public void MakeMove(Move move)
         {
             Board.SetPawnSkipPosition(CurrentPlayer, null);
-            move.Execute(Board);
+            //move.Execute(Board);
+            bool captureOrPawn = move.Execute(Board);
+
+            if(captureOrPawn)
+            {
+                noCaptureOrPawnMoves = 0;
+            }
+            else
+            {
+                noCaptureOrPawnMoves++;
+            }
+
             CurrentPlayer = CurrentPlayer.Oppenent();
             CheckForGameOver();
         }
