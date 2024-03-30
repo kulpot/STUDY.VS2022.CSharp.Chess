@@ -34,6 +34,8 @@
             Piece promotionPiece = CreatePromotionPiece(pawn.Color);
             promotionPiece.HasMoved = true;
             board[ToPos] = promotionPiece;
+
+            return true;
         }
     }
 }
