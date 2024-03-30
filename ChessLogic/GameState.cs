@@ -59,9 +59,9 @@
 
         private void CheckForGameOver()
         {
-            if(!AllLegalMovesFor(CurrentPlayer).Any())
+            if (!AllLegalMovesFor(CurrentPlayer).Any())
             {
-                if(Board.IsInCheck(CurrentPlayer))
+                if (Board.IsInCheck(CurrentPlayer))
                 {
                     Result = Result.Win(CurrentPlayer.Oppenent());
                 }
@@ -70,11 +70,14 @@
                     Result = Result.Draw(EndReason.Stalemate);
                 }
             }
-            else if(Board.InsufficientMaterial())
+            else if (Board.InsufficientMaterial())
             {
                 Result = Result.Draw(EndReason.InsufficientMaterial);
             }
-
+            else if (FiftyMoveRule())
+            {
+                Result = Result.Draw(EndReason.FiftyMoveRule);
+            }
         }
 
         public bool IsGameOver()
