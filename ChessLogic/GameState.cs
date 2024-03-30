@@ -7,6 +7,8 @@
         public Player CurrentPlayer { get; private set; }
         public Result Result { get; private set; } = null;
 
+        private int noCaptureOrPawnMoves = 0;
+
         public GameState(Player player, Board board)
         {
             CurrentPlayer = player;
