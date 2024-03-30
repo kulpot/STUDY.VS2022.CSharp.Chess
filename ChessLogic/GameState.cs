@@ -81,5 +81,11 @@
         {
             return Result != null;
         }
+
+        private bool FiftyMoveRule()
+        {
+            int fullMoves = noCaptureOrPawnMoves / 2;
+            return fullMoves == 50;
+        }
     }
 }
