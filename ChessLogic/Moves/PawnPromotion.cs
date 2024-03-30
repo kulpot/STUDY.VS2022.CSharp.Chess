@@ -25,7 +25,8 @@
             };
         }
 
-        public override void Execute(Board board)
+        //public override void Execute(Board board)
+        public override bool Execute(Board board)
         {
             Piece pawn = board[FromPos];
             board[FromPos] = null;
