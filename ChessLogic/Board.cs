@@ -227,7 +227,15 @@ namespace ChessLogic
                 {
                     continue;
                 }
+
+                EnPassant move = new EnPassant(pos, skipPos);
+                if(move.IsLegal(this))
+                {
+                    return true;
+                }
             }
+
+            return false;
         }
 
         public bool CanCaptureEnPassant(Player player)
