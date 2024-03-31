@@ -254,7 +254,7 @@ namespace ChessLogic
                 _ => Array.Empty<Position>()  //<----- Dummy Case
             };
 
-
+            return HasPawnInPosition(player, pawnPositions, skipPos);
         }
     }
 }
