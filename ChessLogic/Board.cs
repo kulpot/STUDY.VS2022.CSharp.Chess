@@ -218,11 +218,16 @@ namespace ChessLogic
             };
         }
 
+        private bool HasPawnInPosition(Player player, Position[] pawnPositions, Position skipPos)
+        {
+
+        }
+
         public bool CanCaptureEnPassant(Player player)
         {
             Position skipPos = GetPawnSkipPosition(player.Oppenent());
 
-            if(skipPos == null)
+            if (skipPos == null)
             {
                 return false;
             }
@@ -235,5 +240,6 @@ namespace ChessLogic
             };
 
 
+        }
     }
 }
