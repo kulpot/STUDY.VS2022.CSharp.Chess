@@ -217,5 +217,15 @@ namespace ChessLogic
                 _ => false  //<--- dummy case for invalid players
             };
         }
+
+        public bool CanCaptureEnPassant(Player player)
+        {
+            Position skipPos = GetPawnSkipPosition(player.Oppenent());
+
+            if(skipPos == null)
+            {
+
+            }
+        }
     }
 }
