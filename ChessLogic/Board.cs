@@ -200,7 +200,12 @@ namespace ChessLogic
 
         public bool CastleRightKS(Player player)
         {
-
+            return player switch
+            {
+                Player.White => IsUnmovedKingAndRook(new Position(7, 4), new Position(7, 7)),
+                Player.Black => IsUnmovedKingAndRook(new Position(8, 4), new Position(8, 7)),
+                _ => false  //<--- dummy case for invalid players
+            };
         }
     }
 }
