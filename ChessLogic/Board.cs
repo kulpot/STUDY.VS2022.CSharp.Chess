@@ -183,5 +183,19 @@ namespace ChessLogic
         {
             return PiecePositionsFor(color).First(pos => this[pos].Type == type);
         }
+
+        private bool IsUnmovedKingAndRook(Position kingPos, Position rookPos)
+        {
+            if(IsEmpty(kingPos) || IsEmpty(rookPos))
+            {
+                return false;
+            }
+
+            Piece king = this[kingPos];
+            Piece rook = this[rookPos];
+
+            return king.Type == PieceType.King && rook.Type == PieceType.Rook &&
+                !king.HasMoved && !rook.HasMoved;
+        }
     }
 }
