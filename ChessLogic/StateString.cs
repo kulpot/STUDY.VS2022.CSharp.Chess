@@ -44,7 +44,29 @@ namespace ChessLogic
 
         private void AddRowData(Board board, int row)
         {
+            int empty = 0;
 
+            for (int c = 0; c < 8; c++)
+            {
+                if (board[row, c] == null)
+                {
+                    empty++;
+                    continue;
+                }
+
+                if(empty > 0)
+                {
+                    sb.Append(empty);
+                    empty = 0;
+                }
+
+                sb.Append(PieceChar(board[row, c]));
+            }
+
+            if(empty > 0)
+            {
+                sb.Append(empty);
+            }
         }
     }
 }
