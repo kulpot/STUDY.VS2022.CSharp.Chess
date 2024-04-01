@@ -33,6 +33,13 @@ namespace ChessLogic
                 PieceType.King => 'k',
                 _ => ' '
             };
+
+            if(piece.Color == Player.White)
+            {
+                return char.ToUpper(c);
+            }
+
+            return c;
         }
     }
 }
