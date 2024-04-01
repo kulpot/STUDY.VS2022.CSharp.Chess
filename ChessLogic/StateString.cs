@@ -41,5 +41,10 @@ namespace ChessLogic
 
             return c;
         }
+
+        private void AddRowData(Board board, int row)
+        {
+
+        }
     }
 }
