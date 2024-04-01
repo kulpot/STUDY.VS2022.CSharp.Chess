@@ -8,6 +8,6 @@ namespace ChessLogic
 {
     public class StateString
     {
-
+        private readonly StringBuilder sb = new StringBuilder();
     }
 }
