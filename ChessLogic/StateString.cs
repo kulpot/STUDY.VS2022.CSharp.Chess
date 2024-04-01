@@ -9,5 +9,10 @@ namespace ChessLogic
     public class StateString
     {
         private readonly StringBuilder sb = new StringBuilder();
+
+        public StateString(Player currentPlayer, Board board)
+        {
+
+        }
     }
 }
