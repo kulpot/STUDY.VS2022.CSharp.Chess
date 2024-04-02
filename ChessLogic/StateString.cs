@@ -98,7 +98,33 @@ namespace ChessLogic
 
         private void AddCastlingRights(Board board)
         {
+            bool castleWKS = board.CastleRightKS(Player.White);
+            bool castleWQS = board.CastleRightQS(Player.White);
+            bool castleBKS = board.CastleRightKS(Player.Black);
+            bool castleBQS = board.CastleRightQS(Player.Black);
 
+            if(!(castleWKS || castleWQS ||  castleBKS || castleBQS))
+            {
+                sb.Append('-');
+                return;
+            }
+
+            if(castleWKS)
+            {
+                sb.Append('K');
+            }
+            if(castleWQS)
+            {
+                sb.Append('Q');
+            }
+            if(castleBKS)
+            {
+                sb.Append('k');
+            }
+            if(castleBQS)
+            {
+                sb.Append('q');
+            }
         }
     }
 }
