@@ -63,10 +63,15 @@ namespace ChessLogic
                 sb.Append(PieceChar(board[row, c]));
             }
 
-            if(empty > 0)
+            if (empty > 0)
             {
                 sb.Append(empty);
             }
+        }
+
+        private void AddPiecePlacement(Board board)
+        {
+
         }
     }
 }
