@@ -71,7 +71,15 @@ namespace ChessLogic
 
         private void AddPiecePlacement(Board board)
         {
+            for (int r = 0; r < 8; r++)
+            {
+                if(r != 0)
+                {
+                    sb.Append('/');
+                }
 
+                AddRowData(board, r);
+            }
         }
     }
 }
