@@ -16,6 +16,7 @@ namespace ChessLogic
             AddPiecePlacement(board);
             sb.Append(' ');
             // Add current player
+            AddCurrentPlayer(currentPlayer);
             sb.Append(' ');
             // Add castling rights
             sb.Append(' ');
