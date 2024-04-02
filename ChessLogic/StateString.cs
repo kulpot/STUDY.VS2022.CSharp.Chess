@@ -13,6 +13,7 @@ namespace ChessLogic
         public StateString(Player currentPlayer, Board board)
         {
             // Add piece placement data
+            AddPiecePlacement(board);
             sb.Append(' ');
             // Add current player
             sb.Append(' ');
