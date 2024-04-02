@@ -95,5 +95,10 @@ namespace ChessLogic
                 sb.Append('b');
             }
         }
+
+        private void AddCastlingRights(Board board)
+        {
+
+        }
     }
 }
