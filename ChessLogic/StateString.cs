@@ -82,5 +82,10 @@ namespace ChessLogic
                 AddRowData(board, r);
             }
         }
+
+        private void AddCurrentPlayer(Player currentPlayer)
+        {
+
+        }
     }
 }
