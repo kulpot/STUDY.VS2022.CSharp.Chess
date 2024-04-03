@@ -27,7 +27,7 @@ namespace ChessLogic
 
         public override string ToString()
         {
-            return base.ToString();
+            return sb.ToString();
         }
 
         private static char PieceChar(Piece piece)
