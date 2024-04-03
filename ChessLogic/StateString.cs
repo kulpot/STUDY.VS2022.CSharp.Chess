@@ -139,6 +139,8 @@ namespace ChessLogic
             Position pos = board.GetPawnSkipPosition(currentPlayer.Oppenent());
             char file = (char)('a' + pos.Column);
             int rank = 8 - pos.Row;
+            sb.Append(file);
+            sb.Append(rank);
         }
     }
 }
