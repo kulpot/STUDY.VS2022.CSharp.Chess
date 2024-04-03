@@ -22,6 +22,7 @@ namespace ChessLogic
             AddCastlingRights(board);
             sb.Append(' ');
             // Add en passant data
+            AddEnPassant(board, currentPlayer);
         }
 
         private static char PieceChar(Piece piece)
