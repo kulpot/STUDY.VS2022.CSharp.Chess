@@ -25,6 +25,11 @@ namespace ChessLogic
             AddEnPassant(board, currentPlayer);
         }
 
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+
         private static char PieceChar(Piece piece)
         {
             char c = piece.Type switch
