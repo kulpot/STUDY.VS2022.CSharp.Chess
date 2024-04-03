@@ -129,6 +129,11 @@ namespace ChessLogic
         }
 
         private void AddEnPassant(Board board, Player currentPlayer)
+        {
+            if(!board.CanCaptureEnPassant(currentPlayer))
+            {
 
+            }
+        }
     }
 }
