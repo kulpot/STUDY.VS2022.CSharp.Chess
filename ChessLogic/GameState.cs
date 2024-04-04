@@ -18,6 +18,7 @@
             Board = board;
 
             stateString = new StateString(CurrentPlayer, board).ToString();
+            stateHistory[stateString] = 1;
         }
 
         public IEnumerable<Move> LegalMovesForPiece(Position pos)
