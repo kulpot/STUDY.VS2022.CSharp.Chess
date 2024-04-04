@@ -16,6 +16,8 @@
         {
             CurrentPlayer = player;
             Board = board;
+
+            stateString = new StateString(CurrentPlayer, board).ToString();
         }
 
         public IEnumerable<Move> LegalMovesForPiece(Position pos)
