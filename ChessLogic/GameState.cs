@@ -103,7 +103,7 @@
         
             if(!stateHistory.ContainsKey(stateString))
             {
-
+                stateHistory[stateString] = 1;
             }
         }
     }
