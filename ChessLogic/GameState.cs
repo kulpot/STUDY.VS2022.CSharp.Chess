@@ -100,6 +100,11 @@
         private void UpdateStateString()
         {
             stateString = new StateString(CurrentPlayer, Board).ToString();
+        
+            if(!stateHistory.ContainsKey(stateString))
+            {
+
+            }
         }
     }
 }
