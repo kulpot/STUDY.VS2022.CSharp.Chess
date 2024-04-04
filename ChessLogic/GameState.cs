@@ -105,6 +105,10 @@
             {
                 stateHistory[stateString] = 1;
             }
+            else
+            {
+                stateHistory[stateString]++;
+            }
         }
     }
 }
