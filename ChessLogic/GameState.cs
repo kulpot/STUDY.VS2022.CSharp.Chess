@@ -8,6 +8,7 @@
         public Result Result { get; private set; } = null;
 
         private int noCaptureOrPawnMoves = 0;
+        private string stateString;
 
         public GameState(Player player, Board board)
         {
