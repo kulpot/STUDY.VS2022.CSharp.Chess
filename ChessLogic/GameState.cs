@@ -86,6 +86,10 @@
             {
                 Result = Result.Draw(EndReason.FiftyMoveRule);
             }
+            else if(ThreefoldRepetition())
+            {
+
+            }
         }
 
         public bool IsGameOver()
