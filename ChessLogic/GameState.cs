@@ -88,7 +88,7 @@
             }
             else if(ThreefoldRepetition())
             {
-
+                Result = Result.Draw(EndReason.ThreefoldRepetition);
             }
         }
 
