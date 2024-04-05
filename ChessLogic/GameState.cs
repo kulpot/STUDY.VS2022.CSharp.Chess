@@ -115,7 +115,7 @@
 
         private bool ThreefoldRepetition()
         {
-
+            return stateHistory[stateString] == 3;
         }
     }
 }
