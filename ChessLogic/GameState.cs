@@ -49,6 +49,7 @@
             }
 
             CurrentPlayer = CurrentPlayer.Oppenent();
+            UpdateStateString();
             CheckForGameOver();
         }
 
