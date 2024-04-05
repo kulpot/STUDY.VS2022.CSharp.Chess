@@ -112,5 +112,10 @@
                 stateHistory[stateString]++;
             }
         }
+
+        private bool ThreefoldRepetition()
+        {
+
+        }
     }
 }
