@@ -42,6 +42,7 @@
             if(captureOrPawn)
             {
                 noCaptureOrPawnMoves = 0;
+                stateHistory.Clear();
             }
             else
             {
